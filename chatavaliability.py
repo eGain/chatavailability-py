@@ -11,7 +11,7 @@ token = ""
 def anonyomous_access():
     # TODO implement
     global token
-    connection = http.client.HTTPSConnection('support.egain.com')
+    connection = http.client.HTTPSConnection('ecosystem.egain.cloud')
     headers = {'Accept': 'application/json','Accept-Language': 'en-US'}
     connection.request('POST', '/system/ws/v15/ss/portal/555500000001000/authentication/anonymous',"",headers)
     response = connection.getresponse()
@@ -22,7 +22,7 @@ def anonyomous_access():
 
 def chat_availability():
     # TODO implement
-    connection = http.client.HTTPSConnection('support.egain.com')
+    connection = http.client.HTTPSConnection('ecosystem.egain.cloud')
     headers = {'Content-Type': 'application/json','Accept-Language': 'en-US','X-egain-session': token}
     #connection.request('GET', '/system/ws/chat/entrypoint/agentAvailability/1001',"",headers)
     connection.request('GET', '/system/ws/chat/entrypoint/agentAvailability/1022',"",headers)
