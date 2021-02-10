@@ -24,8 +24,7 @@ def chat_availability():
     # TODO implement
     connection = http.client.HTTPSConnection('ecosystem.egain.cloud')
     headers = {'Content-Type': 'application/json','Accept-Language': 'en-US','X-egain-session': token}
-    #connection.request('GET', '/system/ws/chat/entrypoint/agentAvailability/1001',"",headers)
-    connection.request('GET', '/system/ws/chat/entrypoint/agentAvailability/1022',"",headers)
+    connection.request('GET', '/system/ws/chat/entrypoint/agentAvailability/1004',"",headers)
     response = connection.getresponse()
     status = response.status
     responseXml = ET.fromstring(response.read()) 
